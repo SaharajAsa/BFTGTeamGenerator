@@ -1,0 +1,27 @@
+<h1>BFTG team generator</h1>
+<button onclick = "generateTeam()">generate team</button>
+<div id="test">   </div>
+
+
+
+
+<script>
+    const chars = ["Tommy" ,"jason", "gia", "magna", "rj", "zedd","eric","udonna","slayer","chun","ryu","Jen","dog","blue","drakkon","kat","goldar","daishi","sentry","trey","scorpina","lauren"]
+    const teams = new Set();
+
+    function generateTeam(){
+        const team = new Set();
+        while(team.size<3)
+        {
+            team.add(chars[getRandomInt(chars.length-1)])
+        }
+        teams.add(team);
+        console.log(team)
+        //randomly get 3 of the chars
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+            document.getElementById("test").innerText=Array.from(team);     
+    }
+   
+</script>
