@@ -29,7 +29,7 @@
 
 
 <script>
-    const chars = ["Tommy " ,"Jason ", "Gia ", "Magna ", "RJ" , "Zedd ","Eric ","Udonna ","Slayer ","Chun ","Ryu ","Jen ","Dog ","Ceno blue ","Drakkon ","Kat ","Goldar ","Dai Shi ","Sentry ","Trey ","Scorpina ","Lauren "]
+    const chars = ["Tommy" ,"Jason ", "Gia", "Magna", "RJ" , "Zedd","Eric","Udonna","Slayer","Chun","Ryu","Jen","Dog","Ceno Blue","Drakkon","Kat","Goldar","Dai Shi","Sentry","Trey","Scorpina","Lauren"]
     const teams = new Set();
 
     function generateTeam(){
@@ -44,7 +44,8 @@
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
-            document.getElementById("test").innerText=Array.from(team);     
+        teamArray = Array.from(team);
+            document.getElementById("test").innerText=teamArray[0]+", "+teamArray[1]+", "+teamArray[2];     
     }
    
 </script>
