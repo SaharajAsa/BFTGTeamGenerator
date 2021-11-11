@@ -14,12 +14,12 @@
     <div class="p-0 container-fluid " style="height: 100%;"> 
         <div style="height: 20%;">
             <div class="jumbotron text-center">
-                <h1>BFTG team generator</h1>
+                <h1>BFTG Team Generator</h1>
                 
                 
             </div>
         </div>
-        <div class="col text-center"><button onclick = "generateTeam()">generate team</button>   </div>
+        <div class="mb-5 col text-center"><button onclick = "generateTeam()">Generate Team</button>   </div>
         <div class = "mt-5 col text-center"  > <div id="test">   </div></div>
     </div>
     
@@ -29,23 +29,19 @@
 
 
 <script>
-    const chars = ["Tommy" ,"Jason ", "Gia", "Magna", "RJ" , "Zedd","Eric","Udonna","Slayer","Chun","Ryu","Jen","Dog","Ceno Blue","Drakkon","Kat","Goldar","Dai Shi","Sentry","Trey","Scorpina","Lauren"]
-    const teams = new Set();
-
+    const chars = ["Tommy" ,"Jason ", "Gia", "Magna", "RJ" , "Zedd","Eric","Udonna","Slayer","Chun","Ryu","Jen","Dog","Ceno Blue","Drakkon","Kat","Goldar","Dai Shi","Sentry","Trey","Scorpina","Lauren"];
     function generateTeam(){
         const team = new Set();
         while(team.size<3)
         {
             team.add(chars[getRandomInt(chars.length)])
         }
-        teams.add(team);
-        console.log(team)
+        console.log(team);
         //randomly get 3 of the chars
-        function getRandomInt(max) {
+        teamArray = Array.from(team);
+            document.getElementById("test").innerText=teamArray.join(', ');     
+    }
+    function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
-        teamArray = Array.from(team);
-            document.getElementById("test").innerText=teamArray[0]+", "+teamArray[1]+", "+teamArray[2];     
-    }
-   
 </script>
